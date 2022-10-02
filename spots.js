@@ -64,12 +64,17 @@ function draw() {
   //stroke(rand1, rand2, rand3, 20);
   noStroke();
   fill(rand1, rand2, rand3, 50);
-  if(count % 2 == 0) {
-    let circ1 = circle(random(0, windowWidth), random(0, windowHeight),  newRand);
+  
+  if(focused) {
+    if(count < 2000) {
+      if(count % 10 == 0) {
+        let circ1 = circle(ballX, ballY,  newRand);
+      }
+    }
+    
+    ballX = random(0, windowWidth);
+    ballY = random(0, windowHeight);    
+    
+    count++; 
   }
-  else {
-   ballX = random(0, windowWidth);
-   ballY = random(0, windowHeight);
-  }    
-  count++; 
 }
