@@ -65,7 +65,7 @@ function draw() {
   noStroke();
   fill(rand1, rand2, rand3, 50);
   if(count % 1 == 0) {
-    let circ1 = circle(ballX, ballY,  newRand);
+    let circ1 = circle(random(0, windowWidth), random(0, windowHeight),  newRand);
   }
   else {
    ballX = random(0, windowWidth);
